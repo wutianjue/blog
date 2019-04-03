@@ -22,8 +22,8 @@ install:
 - npm install
 - npm install hexo-cli -g
 - npm install hexo-deployer-git --save
-
-script: .travis/theme.sh
+- git clone https://github.com/theme-next/hexo-theme-next themes/next
+- cp .travis/theme_config.yml themes/next/_config.yml
 
 after_success:
 - hexo g -d
