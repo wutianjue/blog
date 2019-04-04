@@ -14,7 +14,7 @@ before_install:
 - cp .travis/ssh_config ~/.ssh/config
 - git config --global user.name 'wutianjue'
 - git config --global user.email jobjoy@qq.com
-- mkdir themes/next
+- mkdir -p themes/next
 - curl -s https://api.github.com/repos/theme-next/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
 - cp .travis/theme_config.yml themes/next/_config.yml
 
