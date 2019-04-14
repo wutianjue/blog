@@ -36,7 +36,7 @@ net_conf(){
         done
     fi
     read -p "Enter local node ip:" local_ip
-    net_str="Subnet = ${local_ip}/24"
+    net_str="Subnet = ${local_ip}/32"
     pub_ip=$pub_ip|sed 's/ //g'
     if [ -n "$pub_ip" ]
     then
